@@ -7,8 +7,8 @@
 :root {
   --orange: #ffc336;
   --winning-blocks: #2d414b;
-  /* --cell-size: 100px;
-  --mark-size: calc(var(--cell-size) * 9); */
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * 9);
 }
 
 
@@ -84,7 +84,7 @@ button {
   font-size: 18px;
   transition: 200ms
 }
-/* button:hover {
+button:hover {
   cursor: pointer;
   transform: translateY(-2px);
-} */
+}
