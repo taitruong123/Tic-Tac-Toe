@@ -62,7 +62,7 @@ const playerHasWon = () => {
     }
     return false;
 }
-
+// restart button
  restartButtons.addEventListener('click', restart)
 
 const restart = () => {
