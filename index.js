@@ -8,7 +8,7 @@ const state = {
 //DOM Selectors
 
 const playerText = document.getElementById('playerText')
-const restartBtn = document.getElementById('restartBtn')
+const restartButton = document.getElementById('restartButton')
 const boxes = Array.from(document.getElementsByClassName('box'))
 
 const winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
@@ -23,7 +23,7 @@ const startGame = () => {
 }
 
 const boxClicked = (e) => {
-    // const id = e.target.id
+    const id = e.target.id
     if(!spaces[id]){
         spaces[id] = currentPlayer
         e.target.innerText = currentPlayer
@@ -63,8 +63,6 @@ const playerHasWon = () => {
     return false;
 }
 // restart button
- restartButtons.addEventListener('click', restart)
-
 const restart = () => {
     spaces.fill(null)
 
@@ -77,5 +75,7 @@ const restart = () => {
 
     currentPlayer = X_TEXT
 }
+ restartButton.addEventListener('click', restart)
+
 
 startGame()
